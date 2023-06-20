@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const https = require('https');
 const core = require('@actions/core');
-const github = require('@actions/github');
 
 const API_URL = 'https://api.github.com/repos/AnnikaCodes/ziglint/releases/latest';
 
@@ -64,7 +63,6 @@ const API_URL = 'https://api.github.com/repos/AnnikaCodes/ziglint/releases/lates
         const toAdd = path.resolve(process.cwd());
         core.addPath(toAdd);
         core.info(`Successfully added ${toAdd} to PATH`);
-        core.info(`PATH: ${process.env.PATH}`);
     } catch (error) {
         core.setFailed(error.message);
     }
