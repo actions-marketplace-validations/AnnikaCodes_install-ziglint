@@ -1,0 +1,18 @@
+name: Example \#1
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Install ziglint
+        uses: AnnikaCodes/install-ziglint@v0.1
+      - name: Lint code
+        run: ziglint
