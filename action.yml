@@ -1,5 +1,7 @@
 name: 'Install ziglint'
 description: 'Installs the ziglint tool for static analysis of Zig code'
+icon: 'download-cloud'
+color: 'blue'
 inputs:
   binary-name:
     description: 'Name to install the ziglint binary as'
