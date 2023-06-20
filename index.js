@@ -61,7 +61,7 @@ const API_URL = 'https://api.github.com/repos/AnnikaCodes/ziglint/releases/lates
 
         // make it executable
         if (os !== 'windows') fs.chmodSync(binaryName, 0o755);
-        const toAdd = path.resolve(process.cwd(), binaryName);
+        const toAdd = path.resolve(process.cwd());
         core.addPath(toAdd);
         core.info(`Successfully added ${toAdd} to PATH`);
         core.info(`PATH: ${process.env.PATH}`);
