@@ -1,0 +1,11 @@
+name: 'Install ziglint'
+description: 'Installs the ziglint tool for static analysis of Zig code'
+inputs:
+  binary-name:
+    description: 'Name to install the ziglint binary as'
+    required: true
+    default: 'ziglint'
+
+runs:
+  using: 'node18'
+  main: 'index.js'
